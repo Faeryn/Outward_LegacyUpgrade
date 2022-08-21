@@ -45,6 +45,8 @@ namespace LegacyUpgrade.Patches {
 			} else if (item.HasLegacyBondEnchantment()) {
 				CreateLegacyBond(legacyChest, character, item);
 				characterUI.ShowInfoNotification($"Legacy Bond established with {item.Name}");
+			} else {
+				characterUI.ShowInfoNotification("This item is not prepared for a Legacy Bond");
 			}
 			return false;
 		}
