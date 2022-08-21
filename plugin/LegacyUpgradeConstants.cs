@@ -1,6 +1,6 @@
 namespace LegacyUpgrade {
 	public static class LegacyUpgradeConstants {
-		public const int ProgressRequired = 1000;
+		public const int ProgressRequired = 20000;
 		public const int LegacyBondEnchantmentID = -12200;
 		public const int LegacyBondEnchantmentRecipeItemID = -12210;
 		
