@@ -23,19 +23,22 @@ namespace FaerynModCauldron.LegacyUpgrade {
 
 		public string GetProgressText() {
 			float progressRatio = (float)Progress/LegacyUpgradeConstants.ProgressRequired;
-			if (progressRatio < 0.25f) {
-				return "Accord";
+			if (progressRatio < 0.2f) {
+				return "Tenuous";
 			} 
-			if (progressRatio < 0.5f) {
-				return "Agreement";
+			if (progressRatio < 0.4f) {
+				return "Weak";
 			} 
-			if (progressRatio < 0.75f) {
-				return "Covenant";
+			if (progressRatio < 0.6f) {
+				return "Mediocre";
+			}
+			if (progressRatio < 0.8f) {
+				return "Developed";
 			} 
 			if (progressRatio < 1f) {
-				return "Pact";
+				return "Strong";
 			} 
-			return "Bond";
+			return "Complete";
 		}
 
 		public bool IsComplete() {

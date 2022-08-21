@@ -11,7 +11,7 @@ namespace FaerynModCauldron.LegacyUpgrade.Patches {
 				Enchantment activeEnchantment = lastItem.ActiveEnchantments[0];
 				if (activeEnchantment.PresetID == LegacyUpgradeConstants.LegacyBondEnchantmentID) {
 					if (lastItem.TryGetLegacyBond(out LegacyBond legacyBond)) {
-						__instance.GetEnchantmentRow(0).SetInfo($"{legacyBond.GetProgressText()} with {legacyBond.CharacterName}", "");
+						__instance.GetEnchantmentRow(0).SetInfo($"{legacyBond.GetProgressText()} bond with {legacyBond.CharacterName}", "");
 						if (Global.CheatsEnabled) {
 							__instance.GetEnchantmentRow(1).SetInfo("ProgressValue", legacyBond.Progress);
 							__instance.GetEnchantmentRow(2).SetInfo("CharacterID", legacyBond.CharacterID);
