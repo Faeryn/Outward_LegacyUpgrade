@@ -2,8 +2,8 @@
     "name": "LegacyUpgrade",
     "author": "Faeryn",
     "version_number": "0.9.0",
-    "website_url": "",
-    "description": "Allows the player to form a Legacy Bond with an item, and eventually upgrade it to its legacy version (similar to vanilla legacy chest upgrade).",
+    "website_url": "https://github.com/Faeryn/Outward_LegacyUpgrade",
+    "description": "Allows the player to form a Legacy Bond with an item, and eventually upgrade it to its legacy version (similar to vanilla legacy chest upgrade). The enchantment recipe can be bought from the Soroborean Caravanner.",
     "dependencies": [
         "BepInEx-BepInExPack_Outward-5.4.18",
         "sinai-dev-SideLoader-3.7.14"
