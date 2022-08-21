@@ -16,5 +16,8 @@ The enchantment recipe can be bought from the Soroborean Caravanner.
 
 ## Changelog
 
+### v0.9.1
+- Minor bugfix
+
 ### v0.9.0
 - Initial release

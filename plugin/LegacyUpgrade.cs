@@ -9,7 +9,7 @@ namespace LegacyUpgrade {
 	public class LegacyUpgrade : BaseUnityPlugin {
 		public const string GUID = "faeryn.legacyupgrade";
 		public const string NAME = "LegacyUpgrade";
-		public const string VERSION = "0.9.0";
+		public const string VERSION = "0.9.1";
 		internal static ManualLogSource Log;
 
 		internal void Awake() {
