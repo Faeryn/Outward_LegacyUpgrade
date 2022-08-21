@@ -1,6 +1,5 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using FaerynModCauldron.LegacyUpgrade;
 using HarmonyLib;
 using SideLoader;
 using UnityEngine;
@@ -66,10 +65,47 @@ namespace LegacyUpgrade {
 						}
 					}
 				},
-				TimeOfDay = new []{ new Vector2(23, 1) },
-				EnchantTime = 2f
+				TimeOfDay = new [] {
+					new Vector2(11, 13)
+				},
+				EnchantTime = 5f
 			};
 			legacyEnchantment.ApplyTemplate();
+			
+
+			SL_EnchantmentRecipeItem enchantmentRecipeItem = new SL_EnchantmentRecipeItem {
+				Target_ItemID = 5800003,
+				New_ItemID = LegacyUpgradeConstants.LegacyBondEnchantmentRecipeItemID,
+				Name = "Enchanting: Legacy Bond",
+				StatsHolder = new SL_ItemStats {
+					BaseValue = 100,
+					RawWeight = 0,
+					MaxDurability = -1
+				},
+				Recipes = new [] {
+					legacyEnchantment.EnchantmentID
+				}
+			};
+			enchantmentRecipeItem.ApplyTemplate();
+
+			SL_DropTable recipeDT = new SL_DropTable {
+				UID = LegacyUpgradeConstants.EnchantmentDroptableUID,
+				GuaranteedDrops = {
+					new SL_ItemDrop {
+						MinQty = 1,
+						MaxQty = 1,
+						DroppedItemID = enchantmentRecipeItem.New_ItemID
+					}
+				}
+			};
+			recipeDT.ApplyTemplate();
+			
+			SL_DropTableAddition potionAndRecipeForMerchants = new SL_DropTableAddition {
+				SelectorTargets = {"-MSrkT502k63y3CV2j98TQ", "G_GyAVjRWkq8e2L8WP4TgA"}, // Soroborean Caravanner
+				DropTableUIDsToAdd = {recipeDT.UID}
+				
+			};
+			potionAndRecipeForMerchants.ApplyTemplate();
 		}
 	}
 }
