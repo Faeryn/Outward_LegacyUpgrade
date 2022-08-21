@@ -1,7 +1,7 @@
-using FaerynModCauldron.LegacyUpgrade.Extensions;
 using HarmonyLib;
+using LegacyUpgrade.Extensions;
 
-namespace FaerynModCauldron.LegacyUpgrade.Patches {
+namespace LegacyUpgrade.Patches {
 	[HarmonyPatch(typeof(Item))]
 	public static class ItemPatches {
 		private const string LegacyBondLegacyChestID = "LegacyBondLegacyChestID";

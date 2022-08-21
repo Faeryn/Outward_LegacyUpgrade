@@ -1,7 +1,7 @@
-using FaerynModCauldron.LegacyUpgrade.Extensions;
 using HarmonyLib;
+using LegacyUpgrade.Extensions;
 
-namespace FaerynModCauldron.LegacyUpgrade.Patches {
+namespace LegacyUpgrade.Patches {
 	[HarmonyPatch(typeof(ItemDetailsDisplay))]
 	public static class ItemDetailsDisplayPatches {
 

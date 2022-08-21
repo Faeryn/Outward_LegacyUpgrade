@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using FaerynModCauldron.LegacyUpgrade.Extensions;
 using HarmonyLib;
+using LegacyUpgrade.Extensions;
 using UnityEngine;
 
-namespace FaerynModCauldron.LegacyUpgrade.Patches {
+namespace LegacyUpgrade.Patches {
 	[HarmonyPatch(typeof(Character))]
 	public static class CharacterPatches {
 

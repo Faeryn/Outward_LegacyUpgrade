@@ -1,6 +1,6 @@
 using System;
 
-namespace FaerynModCauldron.LegacyUpgrade {
+namespace LegacyUpgrade {
 	[Serializable]
 	public class LegacyBond {
 		public UID LegacyChestID { get; }

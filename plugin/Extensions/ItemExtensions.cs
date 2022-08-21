@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace FaerynModCauldron.LegacyUpgrade.Extensions {
+namespace LegacyUpgrade.Extensions {
 	public static class ItemExtensions {
 		private static ConditionalWeakTable<Item, ItemExt> ItemExts = new ConditionalWeakTable<Item, ItemExt>();
 
