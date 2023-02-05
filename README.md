@@ -26,7 +26,7 @@ If you get stuck, here are some hints (click to reveal):
 
 <details>
     <summary>Spoiler</summary>
-    You must do damage while wearing the Legacy Bond enchanted item.
+    You must do damage while wearing the Legacy Bond enchanted item to strengthen the bond.
 </details>
 <details>
     <summary>Spoiler</summary>
@@ -34,7 +34,7 @@ If you get stuck, here are some hints (click to reveal):
 </details>
 <details>
     <summary>Spoiler</summary>
-    Damage is spread evenly between each item you have equipped, so if you have multiple items equipped, each of them will bond slower.
+    Damage is spread evenly between each item you have equipped, so if you have multiple items with Legacy Bond enchantment equipped, each of them will bond slower.
 </details>
 <details>
     <summary>Spoiler</summary>
