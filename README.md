@@ -6,18 +6,47 @@ The enchantment recipe can be bought from the Soroborean Caravanner.
 *Warning: The mod is beta/early access - there may be a major rebalancing before the final release.*
 
 ### Hints
-If you get stuck, here are some hints (select to reveal):  
-Stage 1:
-<p style="color:black; background-color: black">The enchantment process only works around noon.</p>
-Stage 2:
-<p style="color:black; background-color: black">You have to put the item into a Legacy Chest to bond it.</p>
-Stage 3:
-<p style="color:black; background-color: black">You must do damage while wearing the Legacy Bond enchanted item.</p>
-<p style="color:black; background-color: black">Any sort of damage works, even from spells.</p>
-<p style="color:black; background-color: black">Damage is spread evenly between each item you have equipped, so if you have multiple items equipped, each of them will bond slower.</p>
-<p style="color:black; background-color: black">A finished bond shows "Complete".</p>
-Stage 4:
-<p style="color:black; background-color: black">Once you completed the bond, put the item into a Legacy Chest again.</p>
+If you get stuck, here are some hints (click to reveal):
+
+#### Stage 1:
+
+<details>
+    <summary>Spoiler</summary>
+    The enchantment process only works around noon.
+</details>
+
+#### Stage 2:
+
+<details>
+    <summary>Spoiler</summary>
+    You have to put the item into a Legacy Chest to bond it.
+</details>
+
+#### Stage 3:
+
+<details>
+    <summary>Spoiler</summary>
+    You must do damage while wearing the Legacy Bond enchanted item.
+</details>
+<details>
+    <summary>Spoiler</summary>
+    Any sort of damage works, even from spells.
+</details>
+<details>
+    <summary>Spoiler</summary>
+    Damage is spread evenly between each item you have equipped, so if you have multiple items equipped, each of them will bond slower.
+</details>
+<details>
+    <summary>Spoiler</summary>
+    A finished bond shows "Complete".
+</details>
+
+#### Stage 4:
+
+<details>
+    <summary>Spoiler</summary>
+    Once you completed the bond, put the item into a Legacy Chest again.
+</details>
 
 ## Planned features
 - Consider making a new incense for the enchantment
