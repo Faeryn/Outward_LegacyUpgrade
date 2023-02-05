@@ -59,6 +59,10 @@ If you get stuck, here are some hints (click to reveal):
 
 ## Changelog
 
+### v0.9.2
+- Added hints to readme
+- Backpacks can now be enchanted with the Legacy Bond enchantment
+
 ### v0.9.1
 - Minor bugfix
 
