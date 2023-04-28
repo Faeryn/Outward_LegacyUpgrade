@@ -19,7 +19,7 @@ If you get stuck, here are some hints (click to reveal):
 
 <details>
     <summary>Spoiler</summary>
-    You have to put the item into a Legacy Chest to bond it.
+    You have to put the item into a Legacy Chest and then press the "Legacy Bond" button to bond it.
 </details>
 
 #### Stage 3:
@@ -45,7 +45,7 @@ If you get stuck, here are some hints (click to reveal):
 
 <details>
     <summary>Spoiler</summary>
-    Once you completed the bond, put the item into a Legacy Chest again.
+    Once you completed the bond, put the item into a Legacy Chest again and press the "Legacy Bond" button.
 </details>
 
 ## Planned features
