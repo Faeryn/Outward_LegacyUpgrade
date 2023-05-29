@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LegacyUpgrade")]
-[assembly: AssemblyCopyright("Copyright © Faeryn 2022")]
+[assembly: AssemblyCopyright("Copyright © Faeryn 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -13,8 +13,8 @@ namespace LegacyUpgrade.Patches {
 			}
 			
 			InputDisplay upgradeInputDisplay = footer.InfoInputDisplay;
-			Object.Destroy(upgradeInputDisplay.m_lblActionText.GetComponent<UILocalize>());
-			upgradeInputDisplay.ActionText = "Legacy Bond";
+			upgradeInputDisplay.m_lblActionText.GetComponent<UILocalize>().Key = Loc($"{LegacyUpgrade.GUID}.legacy_chest.action.legacy_bond");
+			upgradeInputDisplay.ActionText = Loc("action.legacy_bond");
 		}
 
 		[HarmonyPatch(nameof(LegacyChestPanel.OnInfoInput)), HarmonyPrefix]
@@ -28,27 +28,31 @@ namespace LegacyUpgrade.Patches {
 			Character character = __instance.LocalCharacter;
 			CharacterUI characterUI = character.CharacterUI;
 			if (!item.HasLegacyItem()) {
-				characterUI.ShowInfoNotification("This item is unable to be bound");
+				characterUI.ShowInfoNotification(Loc("fail.wrong_item"));
 				return false;
 			}
 
 			if (item.TryGetLegacyBond(out LegacyBond legacyBond)) {
 				if (!legacyBond.IsActive(character)) {
-					characterUI.ShowInfoNotification("This item is bound to someone else");
+					characterUI.ShowInfoNotification(Loc("fail.wrong_player"));
 				} else if (!legacyBond.IsComplete()) {
-					characterUI.ShowInfoNotification("The Legacy Bond is not strong enough");
+					characterUI.ShowInfoNotification(Loc("fail.weak_bond"));
 				} else {
-					characterUI.ShowInfoNotification($"{item.Name} upgraded");
+					characterUI.ShowInfoNotification(Loc("item_upgraded"));
 					UpgradeLegacyItem(legacyChest);
 					__instance.RefreshContainers();
 				}
 			} else if (item.HasLegacyBondEnchantment()) {
 				CreateLegacyBond(legacyChest, character, item);
-				characterUI.ShowInfoNotification($"Legacy Bond established with {item.Name}");
+				characterUI.ShowInfoNotification(Loc("bond_success"));
 			} else {
-				characterUI.ShowInfoNotification("This item is not prepared for a Legacy Bond");
+				characterUI.ShowInfoNotification(Loc("fail.no_enchantment"));
 			}
 			return false;
+		}
+
+		private static string Loc(string key, params string[] args) {
+			return LocalizationManager.Instance.GetLoc($"{LegacyUpgrade.GUID}.legacy_chest.{key}", args);
 		}
 
 		private static void CreateLegacyBond(ItemContainer legacyChest, Character character, Item item) {

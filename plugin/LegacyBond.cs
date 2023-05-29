@@ -23,22 +23,21 @@ namespace LegacyUpgrade {
 
 		public string GetProgressText() {
 			float progressRatio = (float)Progress/LegacyUpgradeConstants.ProgressRequired;
+			int progressLevel;
 			if (progressRatio < 0.2f) {
-				return "Tenuous";
-			} 
-			if (progressRatio < 0.4f) {
-				return "Weak";
-			} 
-			if (progressRatio < 0.6f) {
-				return "Mediocre";
+				progressLevel = 0;
+			} else if (progressRatio < 0.4f) {
+				progressLevel = 1;
+			} else if (progressRatio < 0.6f) {
+				progressLevel = 2;
+			} else if (progressRatio < 0.8f) {
+				progressLevel = 3;
+			} else if (progressRatio < 1f) {
+				progressLevel = 4;
+			} else {
+				progressLevel = 5;
 			}
-			if (progressRatio < 0.8f) {
-				return "Developed";
-			} 
-			if (progressRatio < 1f) {
-				return "Strong";
-			} 
-			return "Complete";
+			return LocalizationManager.Instance.GetLoc($"{LegacyUpgrade.GUID}.bond.progress_{progressLevel}");
 		}
 
 		public bool IsComplete() {
